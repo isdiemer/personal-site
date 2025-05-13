@@ -1,4 +1,11 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+/* src/app/globals.css or styles/globals.css (wherever applicable) */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom font example */
 
 :root {
   --background: #ffffff;
