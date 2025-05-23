@@ -1,22 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
-/* src/app/globals.css or styles/globals.css (wherever applicable) */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Custom font example */
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,7 +16,7 @@
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
+  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
