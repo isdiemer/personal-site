@@ -9,13 +9,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#372554",    
-        secondary: "5B4EE4"
+        primary: "#372554",
+        secondary: "#5B4EE4",
       },
-      fontFamily:
-      {
-        electrolize: ['Electrolize'],
-      }
+      fontFamily: {
+        electrolize: ["Electrolize"],
+      },
     },
   },
   plugins: [],
