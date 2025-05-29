@@ -10,7 +10,7 @@ export default function Page() {
     setLoading(true);
     setOutput('');
     try {
-      const res = await fetch('https://site-backend-65se.onrender.com', {
+      const res = await fetch('https://site-backend-65se.onrender.com/run', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ input })
