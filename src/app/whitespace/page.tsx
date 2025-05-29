@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-
 export default function Page() {
   const [input, setInput] = useState('');
   const [output, setOutput] = useState('');
@@ -20,7 +19,7 @@ export default function Page() {
 
       const data = await res.json();
       setOutput(data.output);
-    } catch (err) {
+    } catch {
       setOutput('Error: Could not connect to backend.');
     } finally {
       setLoading(false);

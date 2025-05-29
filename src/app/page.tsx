@@ -1,7 +1,7 @@
 'use client';
 import Image from "next/image";
 import dynamic from "next/dynamic";
-
+import { Analytics } from "@vercel/analytics/next"
 const MotionMain = dynamic(() => import("framer-motion").then(mod => mod.motion.main), { ssr: false });
 const MotionDiv = dynamic(() => import("framer-motion").then(mod => mod.motion.div), { ssr: false });
 
@@ -28,7 +28,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)] font-[Fira_Code]">
+    <><div className="min-h-screen bg-[var(--background)] text-[var(--foreground)] font-[Fira_Code]">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 w-full bg-[var(--background)] border-b border-gray-200 dark:border-gray-800 shadow-sm z-20">
         <ul className="flex justify-between items-center px-6 py-4">
@@ -55,17 +55,16 @@ export default function Home() {
                 alt="Profile photo of Isaac Diemer"
                 width={600}
                 height={400}
-                className="w-full object-cover"
-              />
+                className="w-full object-cover" />
             </div>
             <div>
               <h2 className="text-4xl sm:text-5xl font-bold mb-6 dark:text-white">
-                Hi! I'm Isaac Diemer
+                Hi! I&apos;m Isaac Diemer
               </h2>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                I'm a Computer Science major at the University of Michigan, minoring in Mathematics and Electrical Engineering. Over the past two summers, I’ve interned as a Software Engineer at Delta Dental, where I helped design a system to automate client processes. This work drew heavily on formal methods and mathematical rigor—something I’ve loved seeing applied in an industry setting.
+                I&apos;m a Computer Science major at the University of Michigan, minoring in Mathematics and Electrical Engineering. Over the past two summers, I’ve interned as a Software Engineer at Delta Dental, where I helped design a system to automate client processes. This work drew heavily on formal methods and mathematical rigor—something I’ve loved seeing applied in an industry setting.
                 <br /><br />
-                For the past year, I’ve been part of the Hazel research team in the Future of Programming Lab. I began by contributing to Hazel’s type system and have since shifted toward research on programming environments. I’m currently co-authoring a paper on methodologies for evaluating text editors, and our team is building a new editor to address some of the usability gaps we’ve uncovered.
+                For the past year, I&apos;ve been part of the Hazel research team in the Future of Programming Lab. I began by contributing to Hazel’s type system and have since shifted toward research on programming environments. I’m currently co-authoring a paper on methodologies for evaluating text editors, and our team is building a new editor to address some of the usability gaps we’ve uncovered.
                 <br /><br />
                 Outside of tech, I enjoy lifting, reading, running, and playing the piano. I have a particular passion for math—especially functional analysis and order theory :)
               </p>
@@ -92,14 +91,13 @@ export default function Home() {
                 alt={alt}
                 width={600}
                 height={700}
-                className="w-full h-80 rounded-lg mb-4 object-cover"
-              />
+                className="w-full h-80 rounded-lg mb-4 object-cover" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{title}</h3>
               <p className="text-gray-600 dark:text-gray-400 mt-2 text-sm leading-relaxed">{description}</p>
             </MotionDiv>
           ))}
         </div>
       </section>
-    </div>
+    </div><Analytics /></>
   );
 }
