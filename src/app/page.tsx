@@ -30,12 +30,13 @@ export default function Home() {
   return (
     <><div className="min-h-screen bg-[var(--background)] text-[var(--foreground)] font-[Fira_Code]">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 w-full bg-[var(--background)] border-b border-gray-200 dark:border-gray-800 shadow-sm z-20">
+      <nav className="fixed top-0 left-0 right-0 w-full bg-[var(--background)] border-b border-gray-200 shadow-sm z-20">
         <ul className="flex justify-between items-center px-6 py-4">
-          <li className="text-lg font-semibold dark:text-white">Isaac Diemer</li>
+          <li className="text-lg font-semibold text-white">Isaac Diemer</li>
           <div className="flex gap-8">
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li> <a href = "/whitespace"> Whitespace</a> </li>
           </div>
         </ul>
       </nav>
@@ -93,7 +94,7 @@ export default function Home() {
                 height={700}
                 className="w-full h-80 rounded-lg mb-4 object-cover" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{title}</h3>
-              <p className="text-gray-600 dark:text-gray-400 mt-2 text-sm leading-relaxed">{description}</p>
+              <p className=" dark:text-gray-400 mt-2 text-sm leading-relaxed">{description}</p>
             </MotionDiv>
           ))}
         </div>

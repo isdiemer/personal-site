@@ -9,9 +9,8 @@ export default function Page() {
   async function runBinary() {
     setLoading(true);
     setOutput('');
-
     try {
-      const res = await fetch('http://localhost:3001/run', {
+      const res = await fetch('https://site-backend-65se.onrender.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ input })
@@ -27,8 +26,8 @@ export default function Page() {
   }
 
   return (
-    <div className="p-8 max-w-xl mx-auto">
-      <h1 className="text-3xl font-bold mb-4">Run C++ Binary</h1>
+    <div className="p-6 max-w-2xl mx-auto">
+      <h1 className="text-3xl font-bold mb-4">Convert message to whitespace!</h1>
       <input
         type="text"
         placeholder="Enter input"
@@ -47,12 +46,22 @@ export default function Page() {
         {loading ? 'Running...' : output}
       </pre>
       {!loading && output && (
-  <button
-    onClick={() => navigator.clipboard.writeText(output)}
-    className="mt-2 bg-blue-600 px-3 py-1 rounded text-sm hover:bg-gray-300"
-  >
-    Copy to Clipboard
-  </button>
+  <div className="flex gap-2 mt-2">
+    <button
+      onClick={() => navigator.clipboard.writeText(output)}
+      className="bg-blue-600 px-3 py-1 rounded text-sm text-white hover:bg-blue-700"
+    >
+      Copy to Clipboard
+    </button>
+    <a
+      href="https://tio.run/#whitespace"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="bg-blue-600 px-3 py-1 rounded text-sm text-white hover:bg-blue-700"
+    >
+      Try it out!
+    </a>
+  </div>
 )}
     </div>
   );
